@@ -1,14 +1,20 @@
 {
-  "name": "osx-vol",
-  "version": "1.0.3",
-  "description": "Get and set volume in OS X systems.",
+  "name": "linux-vol",
+  "version": "1.0.0",
+  "description": "Get and set volume in Linux systems.",
   "license": "MIT",
-  "repository": "gillstrom/osx-vol",
+  "repository": "mastilver/linux-vol",
   "author": {
     "email": "andreasgillstrom@gmail.com",
     "name": "Andreas Gillström",
     "url": "github.com/gillstrom"
   },
+  "contributors": [
+      {
+          "email": "th.sileghem@gmail.com",
+          "name": "Thomas Sileghem"
+      }
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
@@ -19,15 +25,12 @@
     "index.js"
   ],
   "keywords": [
-    "applescript",
-    "mac",
-    "osx",
+    "linux",
     "sound",
     "vol",
     "volume"
   ],
   "dependencies": {
-    "applescript": "^1.0.0",
     "to-decimal": "^2.0.0",
     "to-percent": "^1.0.2"
   },

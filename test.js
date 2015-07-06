@@ -1,12 +1,12 @@
 'use strict';
 var test = require('ava');
-var osxVol = require('./');
+var linuxVol = require('./');
 
 if (!process.env.CI) {
 	test('get level', function (t) {
 		t.plan(2);
 
-		osxVol.get(function (err, level) {
+		linuxVol.get(function (err, level) {
 			t.assert(!err, err);
 			t.assert(typeof level === 'number');
 		});
@@ -15,12 +15,13 @@ if (!process.env.CI) {
 	test('set level to 50%', function (t) {
 		t.plan(3);
 
-		osxVol.set(0.5, function (err) {
+		linuxVol.set(0.5, function (err) {
 			t.assert(!err, err);
 
-			osxVol.get(function (err, level) {
+			linuxVol.get(function (err, level) {
+
 				t.assert(!err, err);
-				t.assert(level === 0.5);
+				t.assert(0.45 < level && level < 0.55);
 			});
 		});
 	});
