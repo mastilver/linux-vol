@@ -1,26 +1,26 @@
-# osx-vol [![Build Status](https://travis-ci.org/gillstrom/osx-vol.svg?branch=master)](https://travis-ci.org/gillstrom/osx-vol)
+# linux-vol [![Build Status](https://travis-ci.org/mastilver/linux-vol.svg?branch=master)](https://travis-ci.org/mastilver/linux-vol)
 
-> Get and set volume in OS X systems.
+> Get and set volume in Linux systems.
 
 
 ## Install
 
 ```
-$ npm install --save osx-vol
+$ npm install --save linux-vol
 ```
 
 
 ## Usage
 
 ```js
-var osxVol = require('osx-vol');
+var linuxVol = require('linux-vol');
 
-osxVol.get(function (err, level) {
+linuxVol.get(function (err, level) {
 	console.log(level);
 	//=> 0.45
 });
 
-osxVol.set(0.65, function (err) {
+linuxVol.set(0.65, function (err) {
 	console.log('Changed volume to 65%');
 });
 ```
@@ -33,7 +33,7 @@ osxVol.set(0.65, function (err) {
 Get volume level.
 
 #### callback(err, level)
-  
+
 Type: `function`
 
 ##### level
@@ -54,7 +54,7 @@ Type: `number`
 A number between `0` and `1.
 
 #### callback(err)
-  
+
 Type: `function`
 
 
