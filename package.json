@@ -1,6 +1,6 @@
 {
   "name": "linux-vol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get and set volume in Linux systems.",
   "license": "MIT",
   "repository": "mastilver/linux-vol",
@@ -10,10 +10,10 @@
     "url": "github.com/gillstrom"
   },
   "contributors": [
-      {
-          "email": "th.sileghem@gmail.com",
-          "name": "Thomas Sileghem"
-      }
+    {
+      "email": "th.sileghem@gmail.com",
+      "name": "Thomas Sileghem"
+    }
   ],
   "engines": {
     "node": ">=0.10.0"
