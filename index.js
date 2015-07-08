@@ -8,13 +8,13 @@ exports.get = function (cb) {
 		throw new Error('Only Linux systems are supported');
 	}
 
-	childProcess.exec('amixer sget Master', function (err, res) {
+	childProcess.exec('pactl list sinks', function (err, res) {
 		if (err) {
 			cb(err);
 			return;
 		}
 
-		var matches = res.match(/\[(.*)%\]\s\[.*dB\]/);
+		var matches = res.match(/Volume: 0:\s*(\d+)%/);
 
 		if(matches === null){
 			throw new Error('Could not get the volume');
@@ -38,7 +38,7 @@ exports.set = function (level, cb) {
 		return;
 	}
 
-	childProcess.exec('amixer sset Master ' + toPercent(level) + '%', function (err, res) {
+	childProcess.exec('pactl set-sink-volume 0 ' + toPercent(level) + '%', function (err, res) {
 		if (err) {
 			cb(err);
 			return;

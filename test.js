@@ -18,10 +18,12 @@ if (!process.env.CI) {
 		linuxVol.set(0.5, function (err) {
 			t.assert(!err, err);
 
-			linuxVol.get(function (err, level) {
+			setImmediate(function(){
+				linuxVol.get(function (err, level) {
 
-				t.assert(!err, err);
-				t.assert(0.45 < level && level < 0.55);
+					t.assert(!err, err);
+					t.assert(level === 0.5);
+				});
 			});
 		});
 	});
