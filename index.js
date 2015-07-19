@@ -16,7 +16,7 @@ exports.get = function (cb) {
 
 		var matches = res.match(/Volume: 0:\s*(\d+)%/);
 
-		if(matches === null){
+		if (!matches) {
 			throw new Error('Could not get the volume');
 		}
 

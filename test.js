@@ -18,7 +18,7 @@ if (!process.env.CI) {
 		linuxVol.set(0.5, function (err) {
 			t.assert(!err, err);
 
-			setImmediate(function(){
+			setImmediate(function () {
 				linuxVol.get(function (err, level) {
 
 					t.assert(!err, err);
